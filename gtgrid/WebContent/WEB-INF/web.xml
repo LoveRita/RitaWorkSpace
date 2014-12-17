@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ 
+  <welcome-file-list>
+    <welcome-file>html/demo.html</welcome-file>
+  </welcome-file-list>
+  	
+	<servlet >
+	<description>测试servlet</description>
+	<servlet-class>com.ws.serlvet.GtgridServlet</servlet-class>
+	<servlet-name>GtgridServlet</servlet-name>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>GtgridServlet</servlet-name>
+	<url-pattern>/server/getStu</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/html/error_page.html</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/html/error_page.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/html/error_page_500.html</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/html/error_page_404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/html/error_page_403.html</location>
+	</error-page>
+	
+
+
+</web-app>
